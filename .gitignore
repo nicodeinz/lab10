@@ -1,0 +1,6 @@
+# Cartelle di Gradle
+.gradle/
+build/
+
+# Cartelle di compilazione
+bin/
