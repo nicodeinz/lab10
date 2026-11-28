@@ -79,7 +79,7 @@ public final class Configuration {
         private boolean consumed;
 
         /**
-         * Default constructor. Produces a builder with the default configuration.
+         * Default constructor. ProducACes a builder with the default configuration.
          */
         public Builder() {
             // Default constructor
@@ -132,4 +132,3 @@ public final class Configuration {
         }
     }
 }
-
