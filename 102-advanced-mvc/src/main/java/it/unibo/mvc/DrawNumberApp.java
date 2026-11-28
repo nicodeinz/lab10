@@ -70,7 +70,7 @@ public final class DrawNumberApp implements DrawNumberViewObserver {
                     switch (key) {
                         case "minimum" -> builder.withMin(value);
                         case "maximum" -> builder.withMax(value);
-                        case "attemps" -> builder.withAttempts(value);
+                        case "attempts" -> builder.withAttempts(value);
                         default -> throw new IOException("Chiave sconosciuta: " + key);
                     }
                 }
@@ -117,7 +117,11 @@ public final class DrawNumberApp implements DrawNumberViewObserver {
      * @throws FileNotFoundException if the configuration file cannot be fetched
      */
     public static void main() throws FileNotFoundException {
-        new DrawNumberApp(new DrawNumberViewImpl());
+        new DrawNumberApp(
+                new DrawNumberViewImpl(),
+                new DrawNumberViewImpl(),
+                new PrintStreamView(System.out),
+                new PrintStreamView("output.log"));
     }
 
 }
